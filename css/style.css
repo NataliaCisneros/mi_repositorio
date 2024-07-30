@@ -1,0 +1,223 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:#e3c6ee;
+    font-style: oblique;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    /*para colocar el footer al final de la pagina*/
+    flex: 1;
+    background-color: #e1a5f7;
+     
+}
+
+.navbar{
+    background-color: #e3c6ee;
+    width: 100%;
+}
+
+form {
+    display: block;
+    margin-top: 1em;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+}
+
+input, textarea {
+    padding: 0.5em;
+    margin-top: 0.5em;
+    box-sizing: border-box;
+}
+button {
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    border: none;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin: 7px;
+}
+
+.carousel-item img {
+    height: 70%;
+    width: 70%;
+    object-fit: cover; /* Ajusta el contenido de las imágenes al contenedor */
+}
+
+footer {
+    text-align: center; /* Centrar el contenido del footer */
+    height: 20vh;
+    align-content: center;
+    background-color: #e3c6ee;
+}
+
+footer img {
+    width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.propuesta {
+    background-color: #e3c6ee;
+}
+
+.nombre, .correo, .apellido, label {
+    width: 70%;
+    height: 60%;
+    padding: 0.5em;
+    margin: 5% 2.5%;
+    box-sizing: border-box;
+}
+
+h3, form {
+    border: 1px solid black;
+}
+
+.actividades-y-talleres {
+    background-color: #e1a5f7;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas: 
+    'img1 p1'
+    'img2 p2'
+    'img3 p3'
+    'img4 p4'
+    'img5 p5'
+    'img6 p6';
+}
+
+.agenda{
+    background-color: #e1a5f7;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-areas: 
+    'flyer1 p1'
+    'flyer2 p2'
+    'flyer3 p3'
+    'flyer4 p4'
+}
+
+.formulario{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: 
+    'correo text-box'
+    'nombre text-box'
+    'apellido text-box';
+}
+
+.correo{
+    grid-area: correo;
+}
+
+.nombre{
+    grid-area: nombre;
+}
+
+.apellido{
+    grid-area: apellido;
+}
+
+.flyer1 {
+    grid-area: flyer1 ;
+}
+
+.flyer2 {
+    grid-area: flyer2 ;
+}
+
+.flyer3 {
+    grid-area: flyer3 ;
+}
+
+.flyer4 {
+    grid-area: flyer4 ;
+}
+
+.img1 {
+    grid-area: img1 ;
+}
+
+.img2 {
+    grid-area: img2 ;
+}
+
+.img3 {
+    grid-area: img3 ;
+}
+
+.img4 {
+    grid-area: img4 ;
+}
+
+.img5 {
+    grid-area: img5 ;
+}
+
+.img6 {
+    grid-area: img6 ;
+}
+
+.p1 {
+    grid-area: p1 ;
+}
+
+.p2 {
+    grid-area: p2 ;
+}
+
+.p3 {
+    grid-area: p3 ;
+}
+
+.p4 {
+    grid-area: p4 ;
+}
+
+.p5 {
+    grid-area: p5 ;
+}
+
+.p6 {
+    grid-area: p6 ;
+}
+
+/* Para teléfonos móviles en modo retrato y paisaje */
+@media screen and (max-width: 767px) {
+    .navbar{
+        background-color: #e1a5f7;
+    }
+    main{
+        font-size: smaller;
+        background-color: #e3c6ee ;
+    }
+    footer{
+        background-color: #e1a5f7;
+    }
+}
+
+/* Media Query para Tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .navbar{
+        background-color: #e1a5f7;
+    }
+    main{
+        font-size:medium;
+        background-color: #e3c6ee ;
+    }
+    footer{
+        background-color: #e1a5f7;
+    }
+}
+
