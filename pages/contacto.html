@@ -10,16 +10,15 @@
 
 <body>
     <header>
+        <!--logo de la pagina-->
+        <a class="navbar-brand"><img src="../images/logo.jpg" class="logo" alt="logo de la página"></li></a>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-
-            <!--logo de la pagina-->
-            <a class="navbar-brand"><img src="../images/logo.jpg" class="logo" alt="logo de la página"></li></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
                         </li>
@@ -42,28 +41,27 @@
     </header>
 
     <main>
-        <!--imagen de un emoticon de sobrecito-->
-        <img src="" alt="emoticon de sobrecito">
-        <p>Por consultas sobre actividades, escribir a: </p> 
-        <!-- mail de la institución aún no definido-->
-
-        <!--imagen de un emoticon de sobrecito-->
-        <img src="" alt="emoticon de sobrecito">
-        <p>¿Buscás un espacio para tu evento o proyecto? Completá <a href="">este formulario</a></p>
-        <br>
-        
-        <!-- caja de Newslatter para recibir información-->
-        <h3>Newsletter</h3>
-        <p>Dejanos tu contacto para enterarte de las novedades</p>
-        <form class="formulario">
-            <label class="correo" for="mail">Correo</label>
-            <input type="text">
-            <label class="nombre" for="name">Nombre</label>
-            <input type="text">
-            <label class="apellido" for="lastname">Apellido</label>
-            <input type="text">
-            <button type="button">Enviar</button>
-        </form>
+        <section class="contacto">
+            <p>Por consultas sobre actividades, escribir a: <a href="">contacto@lavecindad.com.ar</a></p> 
+            <!-- mail de la institución aún no definido-->
+            <p>¿Buscás un espacio para tu evento o proyecto? Completá <a href="">éste formulario</a></p>
+            <br>
+            
+            <!-- caja de Newslatter para recibir información-->
+            <section class="newsletter">
+                <h3>Newsletter</h3>
+                <p>Dejanos tu contacto para enterarte de las novedades.</p>
+                <form class="formulario">
+                    <label class="correo" for="mail">Correo</label>
+                    <input type="text">
+                    <label class="nombre" for="name">Nombre</label>
+                    <input type="text">
+                    <label class="apellido" for="lastname">Apellido</label>
+                    <input type="text">
+                    <button type="button">Enviar</button>
+                </form>
+            </section>
+        </section>
     </main>
     <footer>
         © 2024 Cariño Carey. Todos los derechos reservados.

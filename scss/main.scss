@@ -1,0 +1,228 @@
+//partials
+@import "partials/variables";
+@import "partials/mixin";
+
+//estilos
+body{
+    @include flex-column;
+    // asegura que el body ocupe toda la altura de la pantalla
+    min-height: 100vh;
+    font-family: $fuente-principal;
+    background-color: $color-principal;
+    font-style: $estilo-de-fuente;
+
+    header{
+        background-color: $color-secundario;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-content: space-between;
+       
+        // logo de la pagina
+        .logo{
+            @include alto-ancho (80px, 80px);
+        }
+    }
+    main{
+        //para mover el Footer siempre hacia abajo
+        flex: 1;
+
+        //estilos de main
+        font-size: $tamanio-de-fuente;
+        background-color: $color-principal;
+        @include flex-column;
+        align-items: center;
+        gap: 10px;
+        
+        //estilo para los carouseles
+        .carousel{
+            @include alto-ancho(auto, 80vw);
+            object-fit: cover;
+        }
+
+        //pestañas
+        .inicio{
+            @include flex-column;
+            .radio-title {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            .radio-player {
+                text-align: center;
+                margin: 20px;
+            }
+            audio {
+                @include alto-ancho(10vh, 60vw);
+            }
+        }
+
+        .la-vecindad{
+            @include flex-column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            .propuesta{
+               @include estilos-vecindad;
+               @include alto-ancho(auto, 60vw);
+            }
+            .dias-y-horarios{
+                @include estilos-vecindad;
+                @include alto-ancho(auto, 80vw);
+                padding: 5px;
+            }
+            .mapa{
+                @include estilos-vecindad;
+                @include alto-ancho(auto, 80vw);
+                margin-bottom: 20px;
+                padding: 20px;
+                
+                iframe{
+                    @include alto-ancho(80vh, 50vw);
+                }
+            }
+        }
+
+        .actividades-y-talleres{
+            display: grid;
+            grid-template-rows: repeat(6,1fr);
+            grid-template-columns: 1fr;
+            .actividad{
+                background-color: $color-secundario;
+                @include bloques(40vh, 80vw);
+
+                //animación
+                &:hover{
+                    transform: scale(1.2);
+                    transition: 1s;
+                }
+                img{
+                    @include detalles-bloque;
+                }
+                p{
+                    @include alto-ancho(auto, 30vw);
+                }
+                input{
+                    @include alto-ancho(7vh, 10vw);
+                    align-self:self-end;
+                    margin-bottom: 10px;
+                    margin-right: 10px;
+                    
+                }
+            }
+            
+        }
+        
+        .agenda{
+            display: grid;
+            grid-template-rows: repeat(4,1fr);
+            grid-template-columns: 1fr;
+            .fecha{
+                text-align: center;
+                background-color: $color-secundario;
+               @include bloques(40vh, 80vw);
+               //animación
+               &:hover{
+                transform: scale(1.2);
+                transition: 1s;
+                }
+
+                img{
+                    @include detalles-bloque;
+                }
+                p{
+                    @include alto-ancho(auto, 30vw);
+                }
+            }
+        }
+
+        .contacto{
+            @include flex-column;
+            text-align: center;
+            align-items: center;
+            margin: 20px;
+            //estilos de la caja newsletter
+            .newsletter{
+                @include flex-column;
+                text-align: center;
+                border: solid black 1px;
+                @include alto-ancho(auto, 30vw);
+                padding: 20px;
+                .formulario{
+                    @include flex-column;
+                    align-self: center;
+                    text-align: left;
+                    button{
+                        align-self: self-end;
+                        margin-top: 20px;
+                    }
+                    label{
+                        align-self: self-left;
+                    }
+                }
+            }   
+        }
+    }
+
+    //estilos de footer
+    footer{
+        text-align: center;
+        background-color: $color-secundario;
+        img{
+            @include alto-ancho(20vh, 100%);
+        }
+    }
+}
+
+// Media Query para Mobile
+
+@media screen and (max-width: 767px) {
+    body{
+         //estilos de main
+        main{
+            justify-content: space-around;
+            
+            //estilos de la vecindad
+            .la-vecindad{
+                font-size: $tamanio-mobile;
+                @include flex-column;
+                .mapa{
+                    padding: 0px;
+                    iframe{
+                        @include alto-ancho(20vh, 80vw);
+                    }
+                }
+            }
+            //estilos de actividades y talleres
+            .actividades-y-talleres{
+                text-align: center;
+                gap: 10px;
+                margin: 20px;
+                .actividad{
+                    @include bloques(20vh, 80vw);
+                    input{
+                        @include alto-ancho(5vh, 20vw);
+                        font-size: $tamanio-mobile;
+                    }
+                } 
+            }
+            //estilos de agenda
+            .agenda{
+                text-align: center;
+                gap: 10px;
+                margin: 20px;
+                .fecha{
+                    @include bloques(25vh, 80vw);
+                    .texto{
+                        margin-right: 10px;
+                    }
+                }
+            }
+            //estilos de contacto
+            .contacto{
+                .newsletter{
+                    @include alto-ancho(auto, 80vw);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+// estilo responsive
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+// alto y ancho
+@mixin alto-ancho ($alto, $ancho){
+    height: $alto;
+    width: $ancho;
+}
+
+// estilos de vecindad
+@mixin estilos-vecindad {
+    background-color: $color-principal;
+    margin-top: 20px;
+}
+
+// estilos de bloques
+@mixin bloques($alto, $ancho){
+    display: flex;
+    flex-direction: row;
+    border: solid #7d2181 1px;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+    @include alto-ancho($alto, $ancho);
+}
+
+// detalles de bloques
+@mixin detalles-bloque{
+    @include alto-ancho(100%, 30%);
+    object-fit: cover;
+    margin-left: 10px;
+}

@@ -10,17 +10,16 @@
 
 <body>
     <header>
+        <!--logo de la pagina-->
+        <img src="images/logo.jpg" class="logo" alt="logo de la página">
         <!--barra de navegación-->
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-
-            <!--logo de la pagina-->
-            <a class="navbar-brand"><img src="images/logo.jpg" class="logo" alt="logo de la página"></li></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                         </li>
@@ -43,42 +42,47 @@
     </header>
 
     <main>
-        <!--carrousel de imagenes-->
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images/carrouselprincipal1.jpg" class="d-block w-100" alt="imagen de radio">
+        <section class="inicio">
+            <!--carrousel de imagenes-->
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-item">
-                    <img src="images/tallerteatro.jpg" class="d-block w-100" alt="imagen de taller de teatro">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/carrouselprincipal1.jpg" class="d-block w-100" alt="imagen de radio">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/tallerteatro.jpg" class="d-block w-100" alt="imagen de taller de teatro">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/tallerceramica.jpg" class="d-block w-100" alt="imagen de taller de ceramica">
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="images/tallerceramica.jpg" class="d-block w-100" alt="imagen de taller de ceramica">
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
 
-        <p>RADIO DE LA VECINDAD</p>
-         <!--botón de radio-->
-        <audio id="radio" src="URL_DE_LA_RADIO" type="audio/mpeg"></audio>
-         
+            <div class="radio-player">
+                <div class="radio-title">RADIO LA VECINDAD</div>
+                <audio controls>
+                <source src="https://playerservices.streamtheworld.com/api/livestream-redirect/ASPEN.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+        </section>
     </main>
     
     <footer>
-        <!--una foto que ocupe el total del ancho de la página-->
+        <!--foto del footer-->
         <img src="images/fotofooter.jpg" alt="imagen-footer">
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

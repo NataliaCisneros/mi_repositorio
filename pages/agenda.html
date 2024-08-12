@@ -10,16 +10,15 @@
 
 <body>
     <header>
+        <!--logo de la pagina-->
+        <a class="navbar-brand"><img src="../images/logo.jpg" class="logo" alt="logo de la página"></li></a>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-
-            <!--logo de la pagina-->
-            <a class="navbar-brand"><img src="../images/logo.jpg" class="logo" alt="logo de la página"></li></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
                         </li>
@@ -41,25 +40,42 @@
         </nav>
     </header>
 
-    <main class="agenda">
-        <!--listado de actividades con horarios y fechas-->
+    <main>
+        <section class="agenda">
+            <!--listado de actividades con horarios y fechas-->
+            <div class="fecha">
+                <img src="../images/tattoofecha.jpg" alt="flyer de tattoo">
+                <div class="texto">
+                    <h5>Tatuajería</h5>
+                    <p>Fecha y Horario: 6/09 - 10:00 hs.</p>
+                </div>
+            </div>
         
-        <img src="../images/tattoofecha.jpg" class="flyer1" alt="flyer de tattoo">
-        <p class="p1" >Fecha y Horario</p>
-    
-    
-        <img src="../images/bandafecha.jpg" class="flyer2" alt="flyer de banda">
-        <p class="p2" >Fecha y Horario</p>
-    
-    
-        <img src="../images/proyeccionpelis.jpg" class="flyer3" alt="proyeccion de pelicula">
-        <p class="p3" >Fecha y Horario</p>
-    
-    
-        <img src="../images/flyerobrateatro.jpg" class="flyer4" alt="flyer obra de teatro">
-        <p class="p4" >Fecha y Horario</p>
+            <div class="fecha">
+                <img src="../images/bandafecha.jpg" alt="flyer de banda">
+                <div class="texto">
+                    <h5>Los Guanacos</h5>
+                    <p>Fecha y Horario: 14/09 y 21/09 - 21:00 hs.</p>
+                </div>
+            </div>
         
+            <div class="fecha">
+                <img src="../images/proyeccionpelis.jpg" alt="proyeccion de pelicula">
+                <div class="texto">
+                    <h5>Cine Club</h5>
+                    <p>Fecha y Horario: Todos los viernes de Septiembre - 20:00 hs.</p>
+                </div>
+            </div>
         
+            <div class="fecha">
+                <img src="../images/flyerobrateatro.jpg" alt="flyer obra de teatro">
+                <div class="texto">
+                    <h5>Las del Gremio</h5>
+                    <p>Fecha y Horario: Todos los viernes y sábados de Septiembre - 21:00 hs.</p>
+                </div>
+            </div>
+
+        </section>
     </main>
     <footer>
         © 2024 Cariño Carey. Todos los derechos reservados.
