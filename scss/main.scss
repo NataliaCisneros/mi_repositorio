@@ -62,16 +62,16 @@ body{
             align-items: center;
             text-align: center;
             .propuesta{
-               @include estilos-vecindad;
-               @include alto-ancho(auto, 60vw);
+                @include estilos-vecindad;
+                @include alto-ancho(auto, 70vw);
             }
             .dias-y-horarios{
                 @include estilos-vecindad;
-                @include alto-ancho(auto, 80vw);
-                padding: 5px;
+                @include alto-ancho(auto, 70vw);
             }
             .mapa{
-                @include estilos-vecindad;
+                background-color: $color-principal;
+                margin-top: 20px;
                 @include alto-ancho(auto, 80vw);
                 margin-bottom: 20px;
                 padding: 20px;
@@ -145,7 +145,7 @@ body{
                 @include flex-column;
                 text-align: center;
                 border: solid black 1px;
-                @include alto-ancho(auto, 30vw);
+                @include alto-ancho(auto, auto);
                 padding: 20px;
                 .formulario{
                     @include flex-column;
@@ -165,62 +165,93 @@ body{
 
     //estilos de footer
     footer{
-        text-align: center;
         background-color: $color-secundario;
         img{
             @include alto-ancho(20vh, 100%);
         }
+        p{
+            margin-top: 18px;
+            text-align: center;
+        }
     }
+}
+
+// Media Query para Tablet
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body{
+        //estilos de main
+       main{
+           justify-content: space-around;
+           
+           //estilos de la vecindad
+           .la-vecindad{
+                .propuesta{
+                    @include estilos-vecindad;
+                    @include alto-ancho(auto, 75vw);
+                }
+                .dias-y-horarios{
+                    @include estilos-vecindad;
+                    @include alto-ancho(auto, 75vw);
+                }
+                .mapa{
+                   padding: 0px;
+                   iframe{
+                       @include alto-ancho(80vh, 50vw);
+                   }
+               }
+           }
+           //estilos de actividades y talleres
+           .actividades-y-talleres{
+               text-align: center;
+               gap: 10px;
+               margin: 20px;
+               .actividad{
+                   @include bloques(20vh, 80vw);
+                   input{
+                       @include alto-ancho(5vh, 20vw);
+                       font-size: $tamanio-mobile;
+                   }
+               } 
+           }
+           //estilos de agenda
+           .agenda{
+               text-align: center;
+               gap: 10px;
+               margin: 20px;
+               .fecha{
+                   @include bloques(25vh, 80vw);
+                   .texto{
+                       margin-right: 10px;
+                   }
+               }
+           }
+       }
+   }
 }
 
 // Media Query para Mobile
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     body{
          //estilos de main
         main{
             justify-content: space-around;
-            
             //estilos de la vecindad
             .la-vecindad{
-                font-size: $tamanio-mobile;
-                @include flex-column;
+                .propuesta{
+                    @include estilos-vecindad;
+                    @include alto-ancho(auto, 80vw);
+                }
+                .dias-y-horarios{
+                    @include estilos-vecindad;
+                    @include alto-ancho(auto, 80vw);
+                }
                 .mapa{
                     padding: 0px;
                     iframe{
                         @include alto-ancho(20vh, 80vw);
                     }
-                }
-            }
-            //estilos de actividades y talleres
-            .actividades-y-talleres{
-                text-align: center;
-                gap: 10px;
-                margin: 20px;
-                .actividad{
-                    @include bloques(20vh, 80vw);
-                    input{
-                        @include alto-ancho(5vh, 20vw);
-                        font-size: $tamanio-mobile;
-                    }
-                } 
-            }
-            //estilos de agenda
-            .agenda{
-                text-align: center;
-                gap: 10px;
-                margin: 20px;
-                .fecha{
-                    @include bloques(25vh, 80vw);
-                    .texto{
-                        margin-right: 10px;
-                    }
-                }
-            }
-            //estilos de contacto
-            .contacto{
-                .newsletter{
-                    @include alto-ancho(auto, 80vw);
                 }
             }
         }

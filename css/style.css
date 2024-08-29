@@ -55,17 +55,20 @@ body main .la-vecindad {
   text-align: center;
 }
 body main .la-vecindad .propuesta {
-  background-color: #e3c6ee;
+  background-color: #e1a5f7;
   margin-top: 20px;
+  padding: 30px;
+  border-radius: 15px;
   height: auto;
-  width: 60vw;
+  width: 70vw;
 }
 body main .la-vecindad .dias-y-horarios {
-  background-color: #e3c6ee;
+  background-color: #e1a5f7;
   margin-top: 20px;
+  padding: 30px;
+  border-radius: 15px;
   height: auto;
-  width: 80vw;
-  padding: 5px;
+  width: 70vw;
 }
 body main .la-vecindad .mapa {
   background-color: #e3c6ee;
@@ -160,7 +163,7 @@ body main .contacto .newsletter {
   text-align: center;
   border: solid black 1px;
   height: auto;
-  width: 30vw;
+  width: auto;
   padding: 20px;
 }
 body main .contacto .newsletter .formulario {
@@ -177,29 +180,43 @@ body main .contacto .newsletter .formulario label {
   align-self: self-left;
 }
 body footer {
-  text-align: center;
   background-color: #e1a5f7;
 }
 body footer img {
   height: 20vh;
   width: 100%;
 }
+body footer p {
+  margin-top: 18px;
+  text-align: center;
+}
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   body main {
     justify-content: space-around;
   }
-  body main .la-vecindad {
-    font-size: 10px;
-    display: flex;
-    flex-direction: column;
+  body main .la-vecindad .propuesta {
+    background-color: #e1a5f7;
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 15px;
+    height: auto;
+    width: 75vw;
+  }
+  body main .la-vecindad .dias-y-horarios {
+    background-color: #e1a5f7;
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 15px;
+    height: auto;
+    width: 75vw;
   }
   body main .la-vecindad .mapa {
     padding: 0px;
   }
   body main .la-vecindad .mapa iframe {
-    height: 20vh;
-    width: 80vw;
+    height: 80vh;
+    width: 50vw;
   }
   body main .actividades-y-talleres {
     text-align: center;
@@ -239,8 +256,32 @@ body footer img {
   body main .agenda .fecha .texto {
     margin-right: 10px;
   }
-  body main .contacto .newsletter {
+}
+@media screen and (max-width: 768px) {
+  body main {
+    justify-content: space-around;
+  }
+  body main .la-vecindad .propuesta {
+    background-color: #e1a5f7;
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 15px;
     height: auto;
+    width: 80vw;
+  }
+  body main .la-vecindad .dias-y-horarios {
+    background-color: #e1a5f7;
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 15px;
+    height: auto;
+    width: 80vw;
+  }
+  body main .la-vecindad .mapa {
+    padding: 0px;
+  }
+  body main .la-vecindad .mapa iframe {
+    height: 20vh;
     width: 80vw;
   }
 }

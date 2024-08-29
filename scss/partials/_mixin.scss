@@ -12,8 +12,10 @@
 
 // estilos de vecindad
 @mixin estilos-vecindad {
-    background-color: $color-principal;
+    background-color: $color-secundario;
     margin-top: 20px;
+    padding: 30px;
+    border-radius: 15px;
 }
 
 // estilos de bloques
